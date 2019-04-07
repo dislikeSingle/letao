@@ -72,34 +72,10 @@ body {
 #main {
   flex: 1;
   overflow: hidden;
-  /* 搜索表单的公共样式 */
 }
 #main .mui-scroll-wrapper {
   position: relative;
   height: 100%;
-}
-#main .search-form {
-  display: flex;
-  padding: .1rem;
-  height: .54rem;
-}
-#main .search-form input {
-  flex: 1;
-  height: .34rem;
-  border: 1px solid #006699;
-  background-color: #fff;
-  text-align: left;
-  font-size: .14rem;
-  border-radius: .06rem 0px 0px .06rem;
-  margin-bottom: 0;
-}
-#main .search-form button {
-  width: .6rem;
-  height: .34rem;
-  border-radius: 0 .06rem .06rem 0px;
-  background-color: #006699;
-  border-color: #006699;
-  border-left: 0;
 }
 /* 底部公共的样式 */
 #footer {
@@ -123,56 +99,32 @@ body {
 #footer .mui-row > div a span {
   display: block;
 }
-/* 主体部分的样式 */
-#main {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  /* 搜索表单的样式 */
-  /* 搜索历史的样式 */
-}
-#main .search-form {
-  display: flex;
-  padding: .1rem;
-  height: .54rem;
-}
-#main .search-form input {
-  flex: 1;
-  height: .34rem;
-  border: 1px solid #006699;
-  background-color: #fff;
-  text-align: left;
+/* 主体区域样式 */
+#main .product-list .mui-card-header a {
+  color: #666;
   font-size: .14rem;
-  border-radius: .06rem 0px 0px .06rem;
-  margin-bottom: 0;
 }
-#main .search-form button {
-  width: .6rem;
-  height: .34rem;
-  border-radius: 0 .06rem .06rem 0px;
-  background-color: #006699;
-  border-color: #006699;
-  border-left: 0;
+#main .product-list .mui-card-content .mui-row > div:nth-child(odd) {
+  padding-right: .05rem;
 }
-#main .search-history {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+#main .product-list .mui-card-content .mui-row > div:nth-child(even) {
+  padding-left: .05rem;
 }
-#main .search-history .mui-card-header {
-  height: .44rem;
+#main .product-list .mui-card-content .mui-row > div .product {
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-top: .1rem;
+  padding-bottom: .1rem;
 }
-#main .search-history .mui-card-content {
-  flex: 1;
+#main .product-list .mui-card-content .mui-row > div .product .product-img {
+  width: 100%;
 }
-#main .search-history .mui-table-view-cell {
-  padding: .15rem;
-}
-#main .search-history .mui-table-view-cell .mui-badge {
-  width: .24rem;
-  height: .24rem;
+#main .product-list .mui-card-content .mui-row > div .product .product-name {
   line-height: .18rem;
 }
-#main .search-history .mui-table-view-cell:after {
-  left: 0;
+#main .product-list .mui-card-content .mui-row > div .product .product-price span {
+  color: red;
+}
+#main .product-list .mui-card-content .mui-row > div .product .product-price del {
+  color: #ccc;
 }

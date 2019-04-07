@@ -58,7 +58,7 @@ $('.category-left ul').on('tap','li',function(){
 
     querySecondCategory(id);
 
-    $this.addClass('active').sibling().removeClass('active');
+    $(this).addClass('active').siblings().removeClass('active');
 
 
 })

@@ -41,7 +41,7 @@
             <!--页眉，放置标题-->
             <div class="mui-card-header">
                 <span>搜索历史</span>
-                <span class="fa fa-trash">清空记录</span>
+                <span class="fa fa-trash btn-clear">清空记录</span>
             </div>
             <!--内容区-->
             <div class="mui-card-content">
@@ -104,14 +104,21 @@
     </footer>
     <!-- 创建一个搜索历史的模板 -->
     <script id="historyTpl" type="text/html">
-        <!-- each的是你自己包装的数组名 -->
-        {{each rows value index}}
+        <!-- 判断返回数据没有长度 <= 0 表示没有数据 就提示 -->
+        {{if rows.length <= 0}}
         <li class="mui-table-view-cell">
-            {{value}}
-            <!-- mui-badge mui提供 右边带数字角标的样式 添加一个x图标 -->
-            <span class="mui-badge fa fa-close" data-index="{{index}}"></span>
+           搜索记录已清空!
         </li>
-        {{/each}}
+        {{else}}
+            <!-- each的是你自己包装的数组名 -->
+            {{each rows value index}}
+            <li class="mui-table-view-cell">
+                {{value}}
+                <!-- mui-badge mui提供 右边带数字角标的样式 添加一个x图标 -->
+                <span class="mui-badge fa fa-close btn-delete" data-index="{{index}}"></span>
+            </li>
+            {{/each}}
+        {{/if}}
     </script>
     <!-- 1. MUI和bootstrap一样 还有JS功能 引入mui.js  但是mui不依赖jquery-->
     <script src="./lib/mui/js/mui.js"></script>
