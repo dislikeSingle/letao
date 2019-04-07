@@ -1,0 +1,61 @@
+@import 'base.less';
+
+/* 主体部分的样式 */
+#main {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* 搜索表单的样式 */
+    .search-form {
+        display: flex;
+        padding: .1rem;
+        height: .54rem;
+        input {
+            flex: 1;
+            height: .34rem;
+            border: 1px solid @main-color;
+            background-color: #fff;
+            text-align: left;
+            font-size: .14rem;
+            border-radius: .06rem 0px 0px .06rem;
+            margin-bottom: 0;
+        }
+
+        button {
+            width: .6rem;
+            height: .34rem;
+            border-radius: 0 .06rem .06rem 0px;
+            background-color: @main-color;
+            border-color: @main-color;
+            border-left: 0;
+        }
+    }
+
+    /* 搜索历史的样式 */
+    .search-history {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .mui-card-header{
+            height: .44rem;
+        }
+        .mui-card-content{
+            flex:1;
+        }
+        .mui-table-view-cell {
+            padding: .15rem;
+
+            .mui-badge {
+                width: .24rem;
+                height: .24rem;
+                // 因为默认有上下3px padding行高就是 高度-上下padding  24 - 6== 18px
+                line-height: .18rem;
+            }
+        }
+
+        .mui-table-view-cell:after {
+            left: 0;
+
+        }
+    }
+}
