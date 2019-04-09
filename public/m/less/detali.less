@@ -1,0 +1,57 @@
+@import 'base.less';
+/* 主体详情部分样式 */
+#main{
+    #slider{
+        img{
+            max-height:3rem;
+        }
+    }
+    .product-detail{
+        .product-name{
+            line-height: .2rem;
+        }
+        .product-price{
+            span{
+                color:red;
+                font-weight: 600;
+            }
+            del{
+                color:#ccc;
+            }
+        }
+        .product-size{
+            line-height: .34rem;
+            .btn-size{
+                margin-bottom: .05rem;
+            }
+        }
+        .mui-table-view-cell:after{
+            left: 0;
+            background-color:#ccc;
+        }
+    }
+}
+// 单独修改底部详情样式
+#footer{
+    background-color: #ccc;
+    .mui-col-xs-2{
+        a{
+            font-size: .2rem;
+         &::before{
+             color:#666;
+         }   
+        }
+        
+    }
+    .mui-col-xs-5{
+        padding: .05rem;
+        button{
+            width: 100%;
+        }
+    }
+}
+
+/* 弹出框的样式 */
+.mui-popup-text{
+    line-height: .3rem;
+}

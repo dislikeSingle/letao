@@ -107,13 +107,13 @@
         <!-- 判断返回数据没有长度 <= 0 表示没有数据 就提示 -->
         {{if rows.length <= 0}}
         <li class="mui-table-view-cell">
-           搜索记录已清空!
+            您的搜索记录 空空如也!
         </li>
         {{else}}
             <!-- each的是你自己包装的数组名 -->
             {{each rows value index}}
             <li class="mui-table-view-cell">
-                {{value}}
+                <a href="productlist.html?search={{value}}">{{value}}</a>
                 <!-- mui-badge mui提供 右边带数字角标的样式 添加一个x图标 -->
                 <span class="mui-badge fa fa-close btn-delete" data-index="{{index}}"></span>
             </li>
